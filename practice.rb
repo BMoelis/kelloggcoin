@@ -45,5 +45,5 @@ wallet[to_user] = wallet.fetch(to_user, 0) + amount
 end
 
 wallet.each do |user, balance|
-  puts "#{user}'s KelloggCoin balance is #{balance}"
+  puts "#{user.capitalize}'s KelloggCoin balance is #{balance}"
 end
