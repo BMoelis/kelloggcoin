@@ -36,5 +36,14 @@ blockchain.each do |transaction|
   from_user = transaction["from_user"]
   to_user = transaction["to_user"]
   amount = transaction["amount"]
-  puts "From: #{from_user}, To: #{to_user}, Amount: #{amount}"
+
+if from_user
+  wallet[from_user] = wallet.fetch(from_user, 0) - amount
+end
+
+wallet[to_user] = wallet.fetch(to_user, 0) + amount
+end
+
+wallet.each do |user, balance|
+  puts "#{user}'s KelloggCoin balance is #{balance}"
 end
