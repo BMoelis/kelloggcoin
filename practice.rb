@@ -27,3 +27,11 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+# Track balances with empty hash
+wallet = {}
+
+# Go through each transaction in the blockchain
+blockchain.each do |transaction|
+  puts transaction
+end
