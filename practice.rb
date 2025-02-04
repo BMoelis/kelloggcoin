@@ -33,5 +33,8 @@ wallet = {}
 
 # Go through each transaction in the blockchain
 blockchain.each do |transaction|
-  puts transaction
+  from_user = transaction["from_user"]
+  to_user = transaction["to_user"]
+  amount = transaction["amount"]
+  puts "From: #{from_user}, To: #{to_user}, Amount: #{amount}"
 end
